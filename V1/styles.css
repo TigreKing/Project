@@ -7,16 +7,21 @@ Date: 05.02.20
 
 /* Structural Styles */
 html{
-    background-color: rgb(#64696C);
+    background-color: black;
+    color: white;
 }
 
 header{
-    background-color: rgb(#394A59);
+    background-color: #333333;
+}
+
+h1{
+    background-color: #64696C;
 }
 
 h1 ~ h2{
-    background-color: rgb(#000000);
-    color: rgb(#BC1E22);
+    background-color:#64696C;
+    color: white;
 }
 
 /* Navigation Styles */
