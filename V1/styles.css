@@ -37,26 +37,16 @@ footer{
     font-size: 1.2rem;
 }
 
-
-
-/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
-  M2LO5 has been demonstrated by use of the comma contextual selector to apply a color to any element that matches h1 or h2 */
-h1, h2{
-    background-color: #64696C; 
-}
-
-
-
-
-
 /* Navigation Styles */
 
+/*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page):
+  M2LO13 has been demonstrated by the font-family rule within the nav > ul > li selector below which changes the font that the nav elements are presented in  */
 nav > ul > li{
     display: inline;
     font-size: 1.3rem;
     font-weight: bold;
+    font-family: impact;
 }
-
 
 /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
   M2LO5 has been demonstrated by use of the > contextual selector to 
@@ -89,6 +79,12 @@ figcaption:hover::after{
     content: " *Wow what a nice guy*"
 }
 
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors):
+  M2LO7 has been demonstrated by use of the elem[att="text"] attribute to alter the border size of figure 1.1 on the index.html page */
+img[src="Fig1-1.jpg"]{
+  border-radius: 10% ;
+}
+
 /* Section Styles */
 
 /*M2LO3 Demonstrate style inheritance (CSS):
@@ -111,7 +107,25 @@ header{
 
 }
 
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the comma contextual selector to apply a color to any element that matches h1 or h2 */
+h1, h2{
+  background-color: #64696C; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the id attribute selector below. id pgbottom created as an attribute of the index.html footer*/
+footer#pgbottom{
+  color: #cccccc;
+  font-weight: bold;
+}
 
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the class selector below. class bottompg created as an attribute of the about.html footer*/
+footer.bottompg p{
+  color: #cccccc;
+  font-weight: bold;
+}
 
 /* Definition List Styles */
