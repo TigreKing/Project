@@ -6,31 +6,112 @@ Date: 05.02.20
 */
 
 /* Structural Styles */
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS):
+  M2LO15 has been demonstrated by the use of the background-color and color 'property:value' pairs applied to the html selector below*/
 html{
     background-color: black;
-    color: white;
+    font-size: 1.1rem;
 }
 
+/*M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 Employing Progressive Enhancement):
+  M2LO14 has been demonstrated by the sequential use of rgb and hsl color values applied to the 'header' selecter below.
+  The explaination of how progressive enhancement has been applied is as follows: In CSS, styles that are specified last are given priority over styles specified earlier if both rules are otherwise equal.
+  Therefore in the case of the below header selector the hsl value will be given priority over the rgb value. However, hsl was only released with CSS3 and was not in use prior to that.
+  This means that old browsers which may still be in use would not understand the hsl property. 
+  Because of this they would use the rgb value to apply color(s) even though hsl would normally take precedence as the style specified last.
+  Modern browsers that can recognize the hsl value will bypass the rgb and apply the hsl instead. 
+  This is essentially what progressive enhancement is; using precedence rules to enable seemless style support for both new and old browsers.
+      */
 header{
+    background-color: rgb(51,51,51);
+    background-color: hsl(0, 0%, 20%);
+}
+
+
+/*M2LO3 Demonstrate style precedence (CSS):
+  M2LO3 has been demonstrated by the footer selector below which is more specific than the html selector above.
+  As such the specified footer background-color and font-size take precedence in the footer where otherwise the html selector style rules would have been applied */
+footer{
     background-color: #333333;
-}
-
-h1{
-    background-color: #64696C;
-}
-
-h1 ~ h2{
-    background-color:#64696C;
-    color: white;
+    font-size: 1.2rem;
 }
 
 
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the comma contextual selector to apply a color to any element that matches h1 or h2 */
+h1, h2{
+    background-color: #64696C; 
 }
+
+
+
+
 
 /* Navigation Styles */
 
+nav > ul > li{
+    display: inline;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the > contextual selector to 
+  apply the color darkred and remove underlines from 'a' elements which are children of li elements, which are children of ul elements, which are children of nav elements */
+nav > ul > li a:link, a:visited{
+    color: darkred;
+    text-decoration: none;
+}
+
+/*M2LO11 Demonstrate a pseudo-class(CSS):
+  M2LO11 has been demonstrated by the use of the dynamic :hover pseudo-class to underline and change the color of nested 'a' elements within the nav element */
+nav > ul > li a:hover{
+    color: white;
+    text-decoration: underline; 
+}
+
+footer a:link, a:visited{
+    color: darkred;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+/*M2LO11 Demonstrate a pseudo-element(CSS):
+  M2LO11 has been demonstrated by use of the 'after' pseudo-element applied to the figcaptain selector below*/
+figcaption:hover::after{
+    content: " *Wow what a nice guy*"
+}
 
 /* Section Styles */
+
+/*M2LO3 Demonstrate style inheritance (CSS):
+  M2LO3 has been demonstrated through the color rule applied to the article selector below because
+  the rule specifying white text will be flowed down to all other elements nested within article (h1, h2, and p elements) unless another more specific rule is applied to one of those elements */
+article{
+    color: white;
+}
+
+aside{
+    color: ivory;
+}
+
+/*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page):
+  M2LO12 was demonstrated by the header selector height rule below. */
+header{
+    height: 50px;
+    margin-top: -1%;
+    padding-top: 1%
+
+}
+
+
 
 
 /* Definition List Styles */

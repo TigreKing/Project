@@ -13,21 +13,34 @@
         <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
         <title>About</title>
         <link href="styles.css" rel="stylesheet" />
+        <!--M2LO4 Demonstrate embedded styles (HTML): M2LO4 demonstrated below-->
+        <style>
+            ul{
+                list-style-type: lower-roman;
+            }
+            ul a:link, a:visited{
+                text-decoration: none;
+            } 
+        </style>
     </head>
     <body>
         <header>
             <nav>
-                <a href="index.html">Home</a> &diams;
-                <a href="pre-empire.html">Palpatine Pre-Empire</a> &diams;
-                <a href="post-empire.html">Palpatine Post-Empire</a> &diams;
-                <a href="notablequotes.html">Notable Quotes</a> &diams;
-                <a href="about.html">About</a>
+                <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
+                    M1LO13 for site navigation hyperlinks has been demonstrated by the 'a' elements below-->
+                <ul>
+                <li><a href="index.html">Home</a></li> &diams;
+                <li><a href="pre-empire.html">Palpatine Pre-Empire</a></li> &diams;
+                <li><a href="post-empire.html">Palpatine Post-Empire</a></li> &diams;
+                <li><a href="notablequotes.html">Notable Quotes</a></li> &diams;
+                <li><a href="about.html">About</a></li>
+                </ul>
             </nav>
         </header>
         <aside>
             <figure>
                 <img src="fig5-1.jpg" alt="Palpatine fights for the people"/>
-                <figcaption>Figure 5-1: Palpatine generously offering to provide 100% free electrical power to all imperial citizens.</figcaption>
+                <figcaption>Figure 5-1: Palpatine champions unlimited green energy for all.</figcaption>
             </figure>
         </aside>
         <article>
@@ -38,18 +51,35 @@
             </p>
             <p> 
                 <h1>Changelog</h1>
-                <h2>V1 Additions</h2>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
+                    <h2>V1</h2>
+                    <!--M1LO7 Demonstrate the use of ordered lists (HTML): 
+                        M1L07 has been demonstrated by the use of an ordered list element below to log in a numerical format what pages have been added in V1, 
+                        what is currently present, and the impact of CSS on the site-->
+                        <ol>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
             </p>
+                    <h2>V2</h2>
+                        <p>To be completed with submission of V2 site revision.</p>
+                    <h2>V3</h2>
+                        <p>To be completed with submission of V3 site revision.</p>
+                    <h2>V4</h2>
+                        <p>To be completed with submission of V3 site revision.</p>
+                <h1>Sources</h1>
+                    <p>The source websites for of all pictures utilized in the creation of this webpage are linked below.</p>
+                    <ul>
+                        <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
+                            M1LO13 for external hyperlinks has been demonstrated by the 'a' elements below-->
+                        <li><a href="https://knowyourmeme.com/memes/the-tragedy-of-darth-plagueis-the-wise">Figure 1.1</a></li>
+                        <li><a href="https://www.meme-arsenal.com/en/create/template/1767937">Figure 5.1</a></li>
+                    </ul>
         </article>
         <footer>
-            <a href="#PageTop"><p>Return to top of page.</p></a>
+            <a href="#PageTop"><p>Click this link to return to the top of the page.</p></a>
         </footer>
     </body>
 </html>
