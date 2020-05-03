@@ -1,8 +1,12 @@
 @charset "utf-8";
 
 /*
+Course: CIS 155
+Assignment: Palpatine Project V1
+Purpose: External stylesheet to be applied to Palpatine Webpage html files.
 Author: Jonathan 
 Date: 05.02.20
+Filename: styles.css    
 */
 
 /* Structural Styles */
@@ -73,18 +77,6 @@ footer a:hover{
     text-decoration: underline;
 }
 
-/*M2LO11 Demonstrate a pseudo-element(CSS):
-  M2LO11 has been demonstrated by use of the 'after' pseudo-element applied to the figcaptain selector below*/
-figcaption:hover::after{
-    content: " *Wow what a nice guy*"
-}
-
-/*M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors):
-  M2LO7 has been demonstrated by use of the elem[att="text"] attribute to alter the border size of figure 1.1 on the index.html page */
-img[src="Fig1-1.jpg"]{
-  border-radius: 10% ;
-}
-
 /* Section Styles */
 
 /*M2LO3 Demonstrate style inheritance (CSS):
@@ -104,7 +96,6 @@ header{
     height: 50px;
     margin-top: -1%;
     padding-top: 1%
-
 }
 
 /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
@@ -128,4 +119,14 @@ footer.bottompg p{
   font-weight: bold;
 }
 
-/* Definition List Styles */
+/*M2LO11 Demonstrate a pseudo-element(CSS):
+  M2LO11 has been demonstrated by use of the 'after' pseudo-element applied to the figcaptain selector below*/
+figcaption:hover::after{
+  content: " *Wow what a nice guy*"
+}
+
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors):
+  M2LO7 has been demonstrated by use of the elem[att="text"] attribute to alter the border size of figure 1.1 on the index.html page */
+img[src="Fig1-1.jpg"]{
+  border-radius: 10% ;
+}
