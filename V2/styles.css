@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/*
+Course: CIS 155
+Assignment: Palpatine Project V1
+Purpose: External stylesheet to be applied to Palpatine Webpage html files.
+Author: Jonathan 
+Date: 05.02.20
+Filename: styles.css    
+*/
+
+/* Structural Styles */
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS):
+  M2LO15 has been demonstrated by the use of the background-color and color 'property:value' pairs applied to the html selector below*/
+html{
+  background-color: black;
+  font-size: 1.1rem;
+}
+
+/*M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 Employing Progressive Enhancement):
+  M2LO14 has been demonstrated by the sequential use of rgb and hsl color values applied to the 'header' selecter below.
+  The explaination of how progressive enhancement has been applied is as follows: In CSS, styles that are specified last are given priority over styles specified earlier if both rules are otherwise equal.
+  Therefore in the case of the below header selector the hsl value will be given priority over the rgb value. However, hsl was only released with CSS3 and was not in use prior to that.
+  This means that old browsers which may still be in use would not understand the hsl property. 
+  Because of this they would use the rgb value to apply color(s) even though hsl would normally take precedence as the style specified last.
+  Modern browsers that can recognize the hsl value will bypass the rgb and apply the hsl instead. 
+  This is essentially what progressive enhancement is; using precedence rules to enable seemless style support for both new and old browsers.
+      */
+header{
+  background-color: rgb(51,51,51);
+  background-color: hsl(0, 0%, 20%);
+}
+
+/*M2LO3 Demonstrate style precedence (CSS):
+  M2LO3 has been demonstrated by the footer selector below which is more specific than the html selector above.
+  As such the specified footer background-color and font-size take precedence in the footer where otherwise the html selector style rules would have been applied */
+footer{
+  background-color: #333333;
+  font-size: 1.2rem;
+}
+
+/* Navigation Styles */
+
+/*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page):
+  M2LO13 has been demonstrated by the font-family rule within the nav > ul > li selector below which changes the font that the nav elements are presented in  */
+nav > ul > li{
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: impact;
+}
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the > contextual selector to 
+  apply the color darkred and remove underlines from 'a' elements which are children of li elements, which are children of ul elements, which are children of nav elements */
+nav > ul > li a:link, a:visited{
+  color: darkred;
+  text-decoration: none;
+}
+
+/*M2LO11 Demonstrate a pseudo-class(CSS):
+  M2LO11 has been demonstrated by the use of the dynamic :hover pseudo-class to underline and change the color of nested 'a' elements within the nav element when the mouse hovers over a nav hyperlink*/
+nav > ul > li a:hover{
+  color: white;
+  text-decoration: underline; 
+}
+
+footer a:link, a:visited{
+  color: darkred;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+/* Section Styles */
+
+/*M2LO3 Demonstrate style inheritance (CSS):
+  M2LO3 has been demonstrated through the color rule applied to the article selector below because
+  the rule specifying white text will be flowed down to all other elements nested within article (h1, h2, and p elements) unless another more specific rule is applied to one of those elements */
+article{
+  color: white;
+}
+
+aside{
+  color: ivory;
+}
+
+/*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page):
+  M2LO12 was demonstrated by the header selector height rule below which more than doubled the size of the area on the top of all pages that 
+  has the header background color (grey) rather than the html background color (black) */
+header{
+  height: 50px;
+  margin-top: -1%;
+  padding-top: 1%
+}
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the comma contextual selector to apply a grey background color (and different font family) to any element that matches h1 or h2 
+  instead of the baseline black background color applied to the html selector */
+h1, h2{
+  background-color: #64696C; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the id attribute selector below. id pgbottom created as an attribute of the index.html footer*/
+footer#pgbottom{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the class selector below. class bottompg created as an attribute of the about.html footer*/
+footer.bottompg p{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/*M2LO11 Demonstrate a pseudo-element(CSS):
+  M2LO11 has been demonstrated by use of the 'after' pseudo-element applied to the figcaptain selector below
+  when a user's mouse hovers over figure caption text additional text appears to the right of the caption text*/
+figcaption:hover::after{
+  content: " *Wow what a nice guy*"
+}
+
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors):
+  M2LO7 has been demonstrated by use of the elem[att="text"] attribute to remove the top left corner and bottom right corner of figure 1.1 on the index.html page */
+img[src="Fig1-1.jpg"]{
+  border-radius: 10% ;
+}
+
+/* Page Body Styles */
+
+body{
+  margin-left: auto;
+  margin-right: auto;
+}

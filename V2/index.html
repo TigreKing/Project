@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--M1LO6 Demonstrate the use of basic HTML tags to create a simple Web page 
+    (HTML, this item should be specified once, describing how the file it is in meets this outcome): 
+    M1LO6 has been demonstrated by the use of the doctype, html, head, and elements above and below-->
+<html lang="en">
+    <head>
+        <!--
+            Course: CIS 155
+            Assignment: Palpatine Project V1
+            Purpose: Home page for the Emperor Palpatine website
+            Author: Jonathan Franklin
+            Date: 05.02.20
+            Filename: index.html
+        -->
+        <meta charset="utf-8">
+        <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
+        <title>Home</title>
+        <!--M1LO8 Demonstrate the use of external style sheets (HTML, note the external style sheet must exist and contain CSS):
+            M1LO8 has been demonstrated by the use of the link element with href and rel attributes plus associated values below -->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                <!--M1LO12 Create navigation using unordered lists (HTML):
+                    M1LO12 has been demonstrated by the use of unordered list items as children of the nav element above-->
+                <li><a href="index.html">Home</a></li> &diams;
+                <li><a href="pre-empire.html">Palpatine Pre-Empire</a></li> &diams;
+                <li><a href="post-empire.html">Palpatine Post-Empire</a></li> &diams;
+                <li><a href="notablequotes.html">Notable Quotes</a></li> &diams;
+                <li><a href="about.html">About</a></li>
+                <!--M1LO10 Demonstrate the use of special characters from extended character sets (HTML, use entities, not cut-and-pasted unicode characters):
+                    M1LO10 has been demonstrated by the use of '&diams;' entities in the nav link elements above-->
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <h1 id="PageTop">Dedication</h1>
+            <!--M2LO4 Demonstrate inline styles (HTML): 
+                M2LO4 demonstrated by the use of a style attribute applied to the p element below-->
+            <p style="font-weight: bold;">This website is dedicated to the tragedy of Darth Plagueis the Wise, a story the Jedi would not tell you (because they hate the truth).</p>
+            <figure>
+                <!--M1LO9 Demonstrate the use of inline images (HTML):
+                    M1LO9 has been demonstrated by the use of an img element with src attribute below-->
+                <img src="Fig1-1.jpg" alt="Jedi hate this story"/>
+                <figcaption>Figure 1.1: Palpatine mentoring an at-risk youth.</figcaption>
+            </figure>
+        </aside>
+        <article>
+            <h1>Purpose Statement </h1>
+                <p>
+                    The Star Wars universe first entered the scene 43 years ago with the release of the first film, at the time simply titled Star Wars but now known as A New Hope.
+                    In the ensuing years Star Wars has cemented itself as a global pop-cultural icon that has touched the lives of millions.
+                    Despite this, most people have failed to understand that the Empire in general and Emperor Palpatine in particular are not actually villains but rather the true unsung heros of the saga.
+                    I've created this website to correct the record on Palpatine. My hope is that I can put to an end the shameful slander his character has undergone and spread the true light of Palpatines greatness to the masses.
+                </p>
+
+            <h2>Palpatine Pre-Empire</h2>
+                <p>
+                    Despite eventually becoming the man who brought the galaxy into a new age of peace, prosperity, and security, surprisingly little is known about the origins of Palpatine.
+                    Because of this, he is misunderstood by many due to years of propoganda purpetrated by the terrorist insurgent group known as the Rebel Alliance. 
+                    My goal with the Palpatine Pre-Empire page, which can be accessed from the site navigation menu in the header, is to shed some light on Palpatine's life before becoming Emperor, what inspired him to acheive what he did, and to hopefully set the record straight about this great man.  
+                </p>
+         
+            <h2>Palpatine Post-Empire</h2>
+                <p>
+                    After finally cleansing the galaxy of the corrupt and decadent Old Republic Palpatine continued to dedicate his life towards the betterment of all galactic citizens who he viewed like his dear children.
+                    Unfortunately in the years since he was assassinated by the cowardly murderer Anakin Skywalker, the New Republic Ministry of Propoganda has worked tireless to erase his legacy by painting him a monsterous figure.
+                    As such the Palpatine Post-Empire page, which can be accessed from the site navigation menu in the header, will be dedicated to providing a true, unbiased account of his many accomplishments and ultimate legacy as Emperor.
+                </p>
+
+            <h2>Notable Quotes</h2>
+                <p>
+                   Like many great men, Palpatine has throughout his life uttered many great sayings and dispenced incredible wisdom to those who yearn for truth.
+                   The Notable Quotes page, which can be accessed from the site navigation menu in the header, is intended to chronicle such notable quotes to preserve them for posterity so that they may continue to provide hope and inspiration for generations to come.  
+                </p>
+
+            <h2>About</h2>
+                <p>
+                    While not directly about Palpatine, the about page, which can be accessed from the site navigation menu in the header, will serve as a change log for this site as it continues to be updated.
+                </p>
+        </article>
+        <footer id="pgbottom">
+            <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
+                M1LO13 for targeted location using ids hyperlinks has been demonstrated by the 'a' element below in combination with the id attribute applied to the h1 element immediately below 
+                the aside element on this page-->
+            <p>Emperor Palpatine wants <u>YOU!</u> Enlist in the imperial legion today!</p><br />
+            <a href="#PageTop"><p>Click this link to return to the top of the page.</p></a>
+        </footer>
+    </body>
+</html>
