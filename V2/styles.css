@@ -142,9 +142,19 @@ body{
 
 /* V2 Styles */
 
+/* M4LO3  */
 .rounded{
   border-width: medium;
   border-color: steelblue;
   border-style: solid;
   border-radius: 20px 20px;
+}
+
+body{
+  width: 90%;
+}
+
+html{
+  background-image: url(backgroundimg.jpg);
+  background-repeat: round;
 }
