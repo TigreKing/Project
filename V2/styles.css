@@ -152,9 +152,10 @@ body{
 
 body{
   width: 90%;
+  background-color: black;
+  opacity: 1;
 }
 
 html{
   background-image: url(backgroundimg.jpg);
-  background-repeat: round;
 }
