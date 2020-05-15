@@ -139,3 +139,12 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* V2 Styles */
+
+body > article > h1{
+  border-width: medium;
+  border-color: steelblue;
+  border-style: solid;
+  border-radius: 20px 20px;
+}
