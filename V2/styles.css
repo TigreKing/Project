@@ -142,7 +142,7 @@ body{
 
 /* V2 Styles */
 
-body > article > h1{
+.rounded{
   border-width: medium;
   border-color: steelblue;
   border-style: solid;
