@@ -151,11 +151,14 @@ body{
 }
 
 body{
-  width: 90%;
+  width: 75%;
   background-color: black;
   opacity: 1;
+  
 }
 
+/*M4LO2 */
 html{
-  background-image: url(backgroundimg.jpg);
+  background-image: url(Background_Image.jpg);
+  background-size: cover;
 }
