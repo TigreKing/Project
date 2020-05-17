@@ -6,12 +6,13 @@
             Assignment: Palpatine Project V1
             Purpose: About page for the Emperor Palpatine website
             Author: Jonathan Franklin
-            Date: 05.02.20
+            Date: 05.16.20
             Filename: about.html
         -->
         <meta charset="utf-8"/>
         <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
         <title>About</title>
+        <link href="resetstyle.css" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
         <!--M2LO4 Demonstrate embedded styles (HTML): 
             M2LO4 demonstrated by creation of a style tag within about.html which changes the list icon for all ol second level items from arabic numerals to lower case roman numerals-->
@@ -27,11 +28,11 @@
                 <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
                     M1LO13 for site navigation hyperlinks has been demonstrated by the 'a' elements with href attributes and internal webpage URL values below-->
                 <ul>
-                <li><a href="index.html">Home</a></li> &diams;
-                <li><a href="pre-empire.html">Palpatine Pre-Empire</a></li> &diams;
-                <li><a href="post-empire.html">Palpatine Post-Empire</a></li> &diams;
-                <li><a href="notablequotes.html">Notable Quotes</a></li> &diams;
-                <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home &diams;</a></li> 
+                    <li><a href="pre-empire.html">Palpatine Pre-Empire &diams;</a></li> 
+                    <li><a href="post-empire.html">Palpatine Post-Empire &diams;</a></li> 
+                    <li><a href="notablequotes.html">Notable Quotes &diams;</a></li> 
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,21 +40,22 @@
             <p id="PageTop">
                 Course: CIS 155 <br/>
                 Author: Jonathan Franklin <br/>
-                Date: 05.02.20
+                Date: 05.16.20
             </p>
-            <figure>
-                <img src="fig5-1.jpg" alt="Palpatine fights for the people"/>
-                <figcaption>Figure 5-1: Palpatine offering free, unlimited green energy to the common people.</figcaption>
-            </figure>
         </aside>
-        <article>
+        <article class = "overflow">
+            <!--M4LO1 Demonstrate the use of figure boxes (HTML): M4LO1 demonstrated by figure element below.-->
+                <figure class = "figbox">
+                    <img src="fig5-1.jpg" alt="Palpatine fights for the people"/>
+                    <figcaption>Figure 5-1: Palpatine offering free, unlimited green energy to the common people.</figcaption>
+                </figure>            
                 <h1>Changelog</h1>
                     <h2>V1</h2>
                     <!--M1LO7 Demonstrate the use of ordered lists (HTML): 
                         M1L07 has been demonstrated by the use of an ordered list element below to log in a numerical format what pages have been added in V1, 
                         what is currently present, and the impact of CSS on the site-->
                         <ol>
-                            <li >Created index.html, pre-empire.html, post-empire.html, notablequotes.html, and about.html. All html pages have the elements sub-listed below. 
+                            <li>Created index.html, pre-empire.html, post-empire.html, notablequotes.html, and about.html. All html pages have the elements sub-listed below. 
                                 index.html and about.html also include additional nested elements and content (including all comments demonstrating learning objectives) 
                                 within each of the body items identified in sub-item iii below
                                 <ol> 
@@ -71,21 +73,25 @@
                                     <li>Within section styles: applied more targeted/specific style rules impacting the appearance and presentation of various elements and content</li>
                                 </ol>
                             </li>
-                        </ol>               
+                        </ol>     
                     <h2>V2</h2>
-                        <p>To be completed with submission of V2 site revision.</p>
-                    <h2>V3</h2>
-                        <p>To be completed with submission of V3 site revision.</p>
-                    <h2>V4</h2>
-                        <p>To be completed with submission of V3 site revision.</p>
+                    <ol>
+                        <li>Created resetstyle.css. Substancially modified styles.css, index.html, about.html, and pre-empire.html.
+                            <ol> 
+                                <li>Created additional style rules governing page layout and graphic design in styles.css </li>
+                                <li>Newly created style rules substancially modified the layout and appearance of all pages, but especially index.html, about.html, and pre-empire.html</li>
+                                <li>Added content to pre-empire.html.</li>
+                            </ol>
+                        </li>
+                    </ol> 
                 <h1>Sources</h1>
-                    <p>The source websites for of all pictures utilized in the creation of this webpage are linked below.</p>
+                    <p>The source websites for of all pictures utilized in the creation of this webpage are linked below. Note: In work.</p>
                     <ul>
                         <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
                             M1LO13 for external hyperlinks has been demonstrated by the 'a' elements with href attributes and external webpage URL values below-->
                         <li><a href="https://knowyourmeme.com/memes/the-tragedy-of-darth-plagueis-the-wise">Figure 1.1</a></li>
                         <li><a href="https://www.meme-arsenal.com/en/create/template/1767937">Figure 5.1</a></li>
-                    </ul>
+                    </ul>   
         </article>
         <footer class="bottompg">
             <p>Emperor Palpatine wants <u>YOU!</u> Enlist in the imperial legion today!</p><br />

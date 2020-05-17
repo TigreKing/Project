@@ -5,42 +5,19 @@ Course: CIS 155
 Assignment: Palpatine Project V1
 Purpose: External stylesheet to be applied to Palpatine Webpage html files.
 Author: Jonathan 
-Date: 05.02.20
+Date: 05.16.20
 Filename: styles.css    
 */
 
-/* Structural Styles */
+/* V1 Styles */
+
 
 /*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS):
   M2LO15 has been demonstrated by the use of the background-color and color 'property:value' pairs applied to the html selector below*/
 html{
   background-color: black;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
-
-/*M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 Employing Progressive Enhancement):
-  M2LO14 has been demonstrated by the sequential use of rgb and hsl color values applied to the 'header' selecter below.
-  The explaination of how progressive enhancement has been applied is as follows: In CSS, styles that are specified last are given priority over styles specified earlier if both rules are otherwise equal.
-  Therefore in the case of the below header selector the hsl value will be given priority over the rgb value. However, hsl was only released with CSS3 and was not in use prior to that.
-  This means that old browsers which may still be in use would not understand the hsl property. 
-  Because of this they would use the rgb value to apply color(s) even though hsl would normally take precedence as the style specified last.
-  Modern browsers that can recognize the hsl value will bypass the rgb and apply the hsl instead. 
-  This is essentially what progressive enhancement is; using precedence rules to enable seemless style support for both new and old browsers.
-      */
-header{
-  background-color: rgb(51,51,51);
-  background-color: hsl(0, 0%, 20%);
-}
-
-/*M2LO3 Demonstrate style precedence (CSS):
-  M2LO3 has been demonstrated by the footer selector below which is more specific than the html selector above.
-  As such the specified footer background-color and font-size take precedence in the footer where otherwise the html selector style rules would have been applied */
-footer{
-  background-color: #333333;
-  font-size: 1.2rem;
-}
-
-/* Navigation Styles */
 
 /*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page):
   M2LO13 has been demonstrated by the font-family rule within the nav > ul > li selector below which changes the font that the nav elements are presented in  */
@@ -76,8 +53,6 @@ footer a:hover{
   text-decoration: underline;
 }
 
-/* Section Styles */
-
 /*M2LO3 Demonstrate style inheritance (CSS):
   M2LO3 has been demonstrated through the color rule applied to the article selector below because
   the rule specifying white text will be flowed down to all other elements nested within article (h1, h2, and p elements) unless another more specific rule is applied to one of those elements */
@@ -91,12 +66,13 @@ aside{
 
 /*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page):
   M2LO12 was demonstrated by the header selector height rule below which more than doubled the size of the area on the top of all pages that 
-  has the header background color (grey) rather than the html background color (black) */
+  has the header background color (grey) rather than the html background color (black) 
 header{
   height: 50px;
   margin-top: -1%;
   padding-top: 1%
 }
+*/
 
 /*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
   M2LO5 has been demonstrated by use of the comma contextual selector to apply a grey background color (and different font family) to any element that matches h1 or h2 
@@ -133,32 +109,133 @@ img[src="Fig1-1.jpg"]{
   border-radius: 10% ;
 }
 
-/* Page Body Styles */
-
 body{
   margin-left: auto;
   margin-right: auto;
 }
 
+
 /* V2 Styles */
 
-/* M4LO3  */
-.rounded{
-  border-width: medium;
-  border-color: steelblue;
-  border-style: solid;
-  border-radius: 20px 20px;
-}
 
+/*M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML): M4LO5 demonstrated by box-shadow property applied to
+  border of body element.
+  M4LO3 Demonstrate the use of rounded corners for borders (CSS): M4LO3 demonstrated by use of border-radius property to body style rule*/
 body{
   width: 75%;
   background-color: black;
   opacity: 1;
-  
+  box-shadow: #394A59 10px 0px 15px,
+              #394A59 -10px 0px 15px;
+  border: 5px solid white;
+  border-radius: 50px;
 }
 
-/*M4LO2 */
+header{
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+footer{
+  border-bottom-right-radius: 46px;
+  border-bottom-left-radius: 46px;
+}
+
+/*M4LO2 Demonstrate the use of background images (CSS): M4LO2 demonstrated by background-image and background-size properties applied to html element. */
 html{
   background-image: url(Background_Img.jpg);
   background-size: cover;
 }
+
+/*M3LO2 Demonstrate floating elements (CSS, note where you have specified a floating element and what its impact is): M3LO2 demonstrated by float property applied to figure element below. 
+  Image on index.html page is floated to the right of text as a result of this rule. */
+aside > figure{
+  float: right;
+}
+
+/*M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is): M3LO3 demonstrated by clear property applied to .clear div.
+  Impact of rule results in Papatine Post-Empire H1 and associated text completely lowering below image.*/
+.clear{
+  clear: right;
+}
+
+figure.figbox{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS): M4LO6 demonstrated by use of opacity property applied to img rule. Opacity rule specifically applies to image located on about.html.*/
+figure.figbox > img{
+  display: block;
+  width: 100%;
+  opacity: 0.75;
+}
+
+figure.figbox > figcaption{
+background-color: grey;
+text-align: left;
+font-weight: bold;
+}
+
+/*M4LO4 Demonstrate the use of gradients (CSS): M4LO4 demonstrated by use of linear-gradient properties applied to header and footer element. 
+  Gradient is currently visible on header and footer elements on index.html, pre-empire.html, and about.html pages.*/
+header{
+  background: linear-gradient(#333333, grey);
+}
+
+footer{
+  background: linear-gradient(#333333, grey);
+  font-size: 1.2rem;
+}
+
+/*M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML): M3LO8B has been demonstrated by the position and top properties applied to the h1 element below.
+  The impact on the HTML is to lower the positioning of the DEDICATION <h1> tag at the top of the index.html page.*/
+.position h1{
+  position: relative;
+  top: 3px;
+  }
+
+/*M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML): M3LO8A has been demonstrated by the position and top properties applied to the h1 element below.
+  The impact on the HTML is to lower the positioning of the <p> text located within the aside element of the index.html webpage.*/
+    .position p{
+      position: absolute;
+      top: 100px;
+    }
+    
+/*M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit use of one of the three in your CSS and what the impact is on the HTML): 
+  M3LO9 has been demonstrated by use of fixed positioning below. The impact of the fixed positioning is to make the index.html footer link stay locked in one position regardless of the scale of the screen viewing the page.*/
+footer#pgbottom a{
+  position: fixed;
+  bottom: 85px;
+  left: 350px;
+}
+
+/*M3LO10: Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML): M3LO10 has been demonstrated by the scroll property below.
+  The impact of this rule/property can be seen on the about.html page, which has both a horizontal and vertical scroll bar applied to all items located in the article element of that page.*/
+article.overflow{
+  overflow: scroll;
+  height: 1000px;
+}
+
+/*M4LO8 Demonstrate the use of transformations for 2D or 3D images (CSS, note one of these two in your CSS and explain its impact on the HTML): 
+  M4LO8 has been demonstrated by the transform property applied to the figure element below. The impact of this rule on the HTML is that all pictures on all individual pages appear to be tilting backwards slightly in a 3D like effect.*/
+/*M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is): M3LO11 has been demonstrated by the -webkit- prefix applied to the figure element below. 
+  The impact of prefixes is to enhance vendor browser support for webpage properties. The -webkit- prefix in particular is for Android. */
+figure{
+  transform: perspective(900px) rotateX(5deg);
+  -webkit-transform: perspective(900px) rotateX(5deg);
+}
+
+/*	M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules that do this and what their impact is on the HTML; this can be old div-class based grids, or new CSS3 grids): 
+    M3LO6 has been demonstrated by use of the .grid rule and properties below in concert with multiple div tags located on the pre-empire.html page.
+    The impact on HTML can be seen on the pre-empire.html page where the article area has been split up into two columns and three rows.
+    Each row consists of a captioned image on the left and text on the right.  */
+.grid{
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 30% 30% 30%;
+}
+
+/*NOTE: M4LO7 comment can be found on the index.html page. 
+        M4LO1 comment can be found on the about.html page.*/
