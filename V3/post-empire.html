@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            Course: CIS 155
+            Assignment: Palpatine Project V1
+            Purpose: Post-Empire content page for the Emperor Palpatine website
+            Author: Jonathan Franklin
+            Date: 05.16.20
+            Filename: post-empire.html
+        -->
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
+        <title>Palpatine Post-Empire</title>
+        <link href="resetstyle.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home &diams;</a></li> 
+                    <li><a href="pre-empire.html">Palpatine Pre-Empire &diams;</a></li> 
+                    <li><a href="post-empire.html">Palpatine Post-Empire &diams;</a></li> 
+                    <li><a href="notablequotes.html">Notable Quotes &diams;</a></li> 
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside> 
+            <h1>Under Construction</h1>
+        </aside>
+        <article>
+            <!--M6LO3 Demonstrate how to create a table (HTML, explain table's purpose; it needs to be appropriate data for a table, 
+                and have at least 2 columns and 3 rows, appropriate use of thead/tbody/tfooter, and cells using th/td appropriately):
+                M6LO3 has been demonstrated with the below table element. The purpose of this table to display the specifications of
+                four superweapons constructed by the galactic empire. When including both th and tr elements, the table includes 4 columns 
+                and 6 rows. The thead element has 1 nested tr element, the tbody element has 4 nested tr elements, and the tfoot element
+                has 1 nested tr element. Additionally, a colgroup with 4 nested col elements (each with an id tag attribute) has been created.
+                They have been created to enable individual column width adjustments using css style rules. -->
+            <table class="superweapons">
+                <colgroup>
+                    <col id="col-1"/>
+                    <col id="col-2"/>
+                    <col id="col-3"/>
+                    <col id="col-4"/>
+                    <col id="col-5"/>
+                </colgroup>
+                <thead>
+                <tr id="head">
+                    <th>Img</th>
+                    <th>Project</th>
+                    <th>Crew<br/>Size</th>
+                    <th>Size/<br/>Length</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><img id="tbl-1" src="tbl-1.jpg" alt=""/></td>
+                    <td>Death Star I</td>
+                    <td>~2m</td>
+                    <td>120km&sup3;</td>  
+                    <td>Description here</td>
+                </tr>
+                <tr>
+                    <td><img id="tbl-2" src="tbl-2.jpg" alt=""/></td>
+                    <td>Death Star II</td>
+                    <td>~2.5m</td>
+                    <td>160km&sup3;</td>      
+                    <td>Description here</td>
+                </tr>
+                <tr>
+                    <td><img id="tbl-3" src="tbl-3.jpg" alt=""/></td>
+                    <td>Executor</td>
+                    <td>~280k</td>
+                    <td>19km</td>
+                    <td>Description here</td>
+                </tr>
+                <tr>
+                    <td><img id="tbl-4" src="tbl-4.jpg" alt=""/></td>
+                    <td>Eclipse</td>
+                    <td>~850k</td>
+                    <td>17.5km</td>
+                    <td>Description here</td>
+                </tr>
+            </tbody>
+            <!--M6LO4 Demonstrate how to span multiple rows or multiple columns in a table 
+                (HTML, document where you write HTML that causes a multi-row or multi-column span; say which one it is as well: row or column, or both):
+                M6LO4 for a multi-column span has been demonstrated by the colspan attributed applied within the tfoot nested td element below.
+                This colspan results in the td text spanning all 5 columns on row 6 of the table. If colspan had not been applied, the td text would have been
+                wrapped within the cell located at the first column of the 6th row.-->
+            <tfoot>
+                <tr>
+                    <td colspan="5">See your tax credits at work! These are just a few of the glorious Imperial mega-construction projects that have provided millions of
+                                    high paying jobs to the galaxy's blue collar workers. </td>
+                </tr>
+            </tfoot>
+            </table>
+        </article>
+        <footer>
+            <p>Emperor Palpatine wants <u>YOU!</u> Enlist in the imperial legion today!</p>
+        </footer>
+    </body>  
+</html>

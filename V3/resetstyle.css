@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*
+Course: CIS 155
+Assignment: Palpatine Project V1
+Purpose: External reset stylesheet to be applied to Palpatine Webpage html files.
+Author: Jonathan 
+Date: 05.16.20
+Filename: styles.css    
+*/
+
+/*M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note where you have CSS reset rules): M3LO1 is demonstrated by the below CSS style rules. This stylesheet has been linked to all .html pages */
+body{
+    background-color: black;
+    line-height: 1;
+}
+
+header, nav, aside, figure, figcaption, article, footer {
+    display: block;
+}
+
+
+nav > ul > li {
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+}
+
