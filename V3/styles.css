@@ -5,7 +5,7 @@ Course: CIS 155
 Assignment: Palpatine Project V1
 Purpose: External stylesheet to be applied to Palpatine Webpage html files.
 Author: Jonathan 
-Date: 05.16.20
+Date: 05.30.20
 Filename: styles.css    
 */
 
@@ -303,8 +303,55 @@ tr#head{
   background: linear-gradient(#333333, grey);
 }
 
-img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
+img#tbl-0, img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
   display: block;
   width: 100%;
 }
 
+/*Purpose: Hide the top row when page is viewed viewed by a desktop or larger tablet device.*/
+tr#secret, tr#intensifies{
+  display: none;
+}
+
+tr#secret{
+  color: red;
+}
+
+/* Media Query Styles */
+
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves): 
+M5LO4 demonstrated by application of the xyz style rules nested within the @media rule below. Pull-down functionality was not added to 
+site navigation because this site does not have navigation submenus. Pull-down (collapsible/expandable) functionality was added to the table located on 
+the post-empire.html page instead. Also, please note that a max-width of 550px rather than the typical 480px because 480px 
+was not sufficient to trigger xyz rules when emulating several of the smartphones available to emulate using the Microsoft Edge browser. */
+@media only screen and (max-width: 550px){
+
+tr#intensifies, tr#head, .t-body, .t-foot{
+  display: none;
+}
+
+tr#secret{
+  display: table-row;
+}
+
+tr#secret:hover+tr#intensifies, tr#intensifies:hover{
+  display: table-row;
+}
+/*
+.t-head:hover+.t-body+.t-foot, .t-body:hover .t-foot:hover{
+  display: block;
+}
+*/
+
+/*Purpose: Increase table/table header width from 50% to 95% of page body when viewed
+  on a mobile device so th and tr text is more readable/isn't as squished.*/
+table{
+  width: 95%;
+}
+
+
+
+@media only screen and (min-width: 481px and max-width: 768px){
+
+
+}

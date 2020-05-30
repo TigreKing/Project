@@ -6,11 +6,12 @@
             Assignment: Palpatine Project V1
             Purpose: Post-Empire content page for the Emperor Palpatine website
             Author: Jonathan Franklin
-            Date: 05.16.20
+            Date: 05.30.20
             Filename: post-empire.html
         -->
         <meta charset="utf-8"/>
         <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Palpatine Post-Empire</title>
         <link href="resetstyle.css" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
@@ -38,7 +39,7 @@
                 and 6 rows. The thead element has 1 nested tr element, the tbody element has 4 nested tr elements, and the tfoot element
                 has 1 nested tr element. Additionally, a colgroup with 4 nested col elements (each with an id tag attribute) has been created.
                 They have been created to enable individual column width adjustments using css style rules. -->
-            <table class="superweapons">
+            <table class="t-able">
                 <colgroup>
                     <col id="col-1"/>
                     <col id="col-2"/>
@@ -46,16 +47,22 @@
                     <col id="col-4"/>
                     <col id="col-5"/>
                 </colgroup>
-                <thead>
+                <thead class="t-head">
+                <tr id="secret">
+                    <th colspan="5">Would you like to know more?</th>
+                </tr>
+                <tr id="intensifies"> 
+                    <th colspan="5"><img id="tbl-0" src="intensifies.jpg" alt=""/></th>
+                </tr>
                 <tr id="head">
                     <th>Img</th>
                     <th>Project</th>
                     <th>Crew<br/>Size</th>
-                    <th>Size/<br/>Length</th>
+                    <th>Size</th>
                     <th>Description</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="t-body">
                 <tr>
                     <td><img id="tbl-1" src="tbl-1.jpg" alt=""/></td>
                     <td>Death Star I</td>
@@ -74,14 +81,14 @@
                     <td><img id="tbl-3" src="tbl-3.jpg" alt=""/></td>
                     <td>Executor</td>
                     <td>~280k</td>
-                    <td>19km</td>
+                    <td>L=19km</td>
                     <td>Description here</td>
                 </tr>
                 <tr>
                     <td><img id="tbl-4" src="tbl-4.jpg" alt=""/></td>
                     <td>Eclipse</td>
                     <td>~850k</td>
-                    <td>17.5km</td>
+                    <td>L=17.5km</td>
                     <td>Description here</td>
                 </tr>
             </tbody>
@@ -90,7 +97,7 @@
                 M6LO4 for a multi-column span has been demonstrated by the colspan attributed applied within the tfoot nested td element below.
                 This colspan results in the td text spanning all 5 columns on row 6 of the table. If colspan had not been applied, the td text would have been
                 wrapped within the cell located at the first column of the 6th row.-->
-            <tfoot>
+            <tfoot class="t-foot">
                 <tr>
                     <td colspan="5">See your tax credits at work! These are just a few of the glorious Imperial mega-construction projects that have provided millions of
                                     high paying jobs to the galaxy's blue collar workers. </td>
