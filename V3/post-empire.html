@@ -29,9 +29,71 @@
             </nav>
         </header>
         <aside> 
-            <h1>Under Construction</h1>
+            
         </aside>
         <article>
+            <table class="p-table">
+                <colgroup>
+                    <col id="p-col-1"/>
+                    <col id="p-col-2"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Text</th>
+                    </tr>     
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="2">Early-Empire</th>
+                    </tr>
+                    <tr>                   
+                        <td>
+                            <figure>
+                                <img id="palp3-1" src="Fig3_1.jpg" alt="" />
+                                <figcaption>Figure 3.1: Palpatine retained his great sense of humor and love of laughter, even after a Jedi terrorist attack left him permanently disfigured.</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <p> 
+                                Description in work.
+                            </p> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Mid-Empire</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img id="palp3-2" src="Fig3_2.jpg" alt="" />
+                                <figcaption>Figure 3.2: Palpatine keeping his throne room dark in an effort to reduce Imperial energy consumption and mitigate the harmful effects of galactic warming.</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <p>
+                                Description in work.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Late-Empire</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img id="palp3-3" src="Fig3_3.jpg" alt=""/>
+                                <figcaption>Figure 3.3: Palpatine partnering with Nike in an effort to aspire young athletes throughout the galaxy.</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <p>
+                                Description in work.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <!--M6LO3 Demonstrate how to create a table (HTML, explain table's purpose; it needs to be appropriate data for a table, 
                 and have at least 2 columns and 3 rows, appropriate use of thead/tbody/tfooter, and cells using th/td appropriately):
                 M6LO3 has been demonstrated with the below table element. The purpose of this table to display the specifications of
@@ -39,6 +101,10 @@
                 and 6 rows. The thead element has 1 nested tr element, the tbody element has 4 nested tr elements, and the tfoot element
                 has 1 nested tr element. Additionally, a colgroup with 4 nested col elements (each with an id tag attribute) has been created.
                 They have been created to enable individual column width adjustments using css style rules. -->
+            <h1 id="sw-specs">Imperial Superweapon Technical Specifications Table</h1>
+            <div class="pulldown">
+               <!-- <p class="secret">Would you like to know more?</p> -->
+                
             <table class="t-able">
                 <colgroup>
                     <col id="col-1"/>
@@ -48,12 +114,13 @@
                     <col id="col-5"/>
                 </colgroup>
                 <thead class="t-head">
-                <tr id="secret">
+                <!--<tr id="secret">
                     <th colspan="5">Would you like to know more?</th>
                 </tr>
                 <tr id="intensifies"> 
                     <th colspan="5"><img id="tbl-0" src="intensifies.jpg" alt=""/></th>
                 </tr>
+                -->
                 <tr id="head">
                     <th>Img</th>
                     <th>Project</th>
@@ -104,9 +171,14 @@
                 </tr>
             </tfoot>
             </table>
+            </div>
         </article>
         <footer>
-            <p>Emperor Palpatine wants <u>YOU!</u> Enlist in the imperial legion today!</p>
+            <p>Emperor Palpatine wants <u>YOU!</u> 
+               Talk to your local Imperial recruiter to learn more about the many exciting career opportunities waiting for someone just like you!</p>
+            <p id="learning">Would you like to know more?
+                <img id="intense" src="intensifies.jpg" alt=""/>
+            </p>    
         </footer>
     </body>  
 </html>

@@ -91,7 +91,7 @@ footer#pgbottom{
 
 /*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
   M2LO6 has been demonstrated by use of the class selector below. class bottompg created as an attribute of the about.html footer*/
-footer.bottompg p{
+footer{
   color: #cccccc;
   font-weight: bold;
 }
@@ -257,12 +257,12 @@ figure{
   }
   
 
-/*Table Styles */
+/*Post-empire.html technical specifications table Styles */
 
 /*M6LO7 Demonstrate how to format a table with CSS 
   (CSS, group your table styles together and note the overall impact they have on the HTML):
   M*/
-table{
+table.t-able{
   margin: auto;
   text-align: center;
   font-size: 0.80em;
@@ -274,7 +274,7 @@ table{
 }
 
 /*NtS: Creates borders around header and data cells within the table */
-table th, table td{
+table.t-able th, table.t-able td{
   border: 1px solid white;
   word-wrap: break-word;
 }
@@ -303,18 +303,67 @@ tr#head{
   background: linear-gradient(#333333, grey);
 }
 
-img#tbl-0, img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
+img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
   display: block;
   width: 100%;
 }
 
-/*Purpose: Hide the top row when page is viewed viewed by a desktop or larger tablet device.*/
-tr#secret, tr#intensifies{
+
+/*Pre-Empire.html and post-empire.html Palpatine table styles */
+
+table.p-table, table.pe-table{
+  margin: left;
+  width: 100%;
+  padding-bottom: 5%;
+  text-align: left;
+  table-layout: fixed;
+}
+
+table.p-table thead th, table.pe-table thead th{
   display: none;
 }
 
-tr#secret{
+table.p-table tbody th, table.pe-table tbody th{
+  background: linear-gradient(#333333, grey);
+  background-color: #64696C; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+}
+img#palp2-1, img#palp2-2, img#palp2-3, img#palp3-1, img#palp3-2, img#palp3-3{
+  display: block;
+  width: 100%;
+}
+
+col#p-col-1, col#pe-col-1{
+  width: 50%;
+}
+
+h1#sw-specs{
+  background: linear-gradient(#333333, grey);
+  width: 100%;
+  font-size: inherit;
+}
+
+/* Pulldown Styles */
+
+p#learning{
+  font-weight: bold;
   color: red;
+  text-align: center;
+}
+
+img#intense{
+  display: none;
+  margin: auto;
+  width: 40%;
+}
+
+p#learning:hover img#intense{
+  display: block;
+}
+
+p#learning:visited img#intense{
+  display: block;
 }
 
 /* Media Query Styles */
@@ -324,34 +373,47 @@ M5LO4 demonstrated by application of the xyz style rules nested within the @medi
 site navigation because this site does not have navigation submenus. Pull-down (collapsible/expandable) functionality was added to the table located on 
 the post-empire.html page instead. Also, please note that a max-width of 550px rather than the typical 480px because 480px 
 was not sufficient to trigger xyz rules when emulating several of the smartphones available to emulate using the Microsoft Edge browser. */
+
+
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site):
+  M5LO3 demonstrated by the table rule nested within the @media rule below. At widths above 550px, the table with the classification .t-able (the second table on the post-empire.html page)
+  has a style rule setting its width to 50% of the page body. This width was chosen for astheic reasons. However at smaller resolutions the 50% width limitations makes the table
+  harder content much harder to read. The below style rule increases the table width to 95% of the body at resolutions below 550px to enhance readability.
+  I used the Microsoft Edge browser device emulator to verify this rule worked as intended using multiple mobile devices available for Emulation in Edge. 
+  Also, please note 550px was used instead of 480px to enable functionality of @media rule on all of the emulator's phones. */
 @media only screen and (max-width: 550px){
 
-tr#intensifies, tr#head, .t-body, .t-foot{
-  display: none;
+  table.t-able{
+    width: 95%;
+  }
 }
 
-tr#secret{
-  display: table-row;
+@media only screen and (max-width: 1250px){
+
+  aside.position img{
+    width: 50%;
+  }
 }
 
-tr#secret:hover+tr#intensifies, tr#intensifies:hover{
-  display: table-row;
-}
-/*
-.t-head:hover+.t-body+.t-foot, .t-body:hover .t-foot:hover{
-  display: block;
-}
-*/
+/* FLEXBOX STYLES */
 
-/*Purpose: Increase table/table header width from 50% to 95% of page body when viewed
-  on a mobile device so th and tr text is more readable/isn't as squished.*/
-table{
-  width: 95%;
+
+body.flexbox-1{
+  display: flex;
+  flex-flow: row wrap;
 }
 
-
-
-@media only screen and (min-width: 481px and max-width: 768px){
-
-
+body.flexbox-1 header, footer{
+  width: 100%;
 }
+
+body.flexbox-1 article h1, p{
+  flex: 1 1 200px;
+}
+
+body.flexbox-1 article figure{
+  flex: 3 1 350px;
+}
+
+/*Formatting Styles */
+
