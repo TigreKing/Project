@@ -2,15 +2,14 @@
 
 /*
 Course: CIS 155
-Assignment: Palpatine Project V1
+Assignment: Palpatine Project V3
 Purpose: External stylesheet to be applied to Palpatine Webpage html files.
 Author: Jonathan 
-Date: 05.30.20
+Date: 06.06.20
 Filename: styles.css    
 */
 
-/* V1 Styles */
-
+/*--V1 STYLES--*/
 
 /*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS):
   M2LO15 has been demonstrated by the use of the background-color and color 'property:value' pairs applied to the html selector below*/
@@ -115,8 +114,7 @@ body{
 }
 
 
-/* V2 Styles */
-
+/*--V2 STYLES--*/
 
 /*M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML): M4LO5 demonstrated by box-shadow property applied to
   border of body element.
@@ -243,25 +241,31 @@ figure{
         M4LO1 comment can be found on the about.html page.*/
 
 
-/* V3 Styles */
-
+/*--V3 STYLES--*/
 
 /* Body Styles */
 
-/*NtS: Creates left and right body element padding. 
-  Purpose mainly to prevent text near bottom left of body from
-  spilling outside the rounded border. Right padding to create even look. */
   body{
     padding-left: 0.5%;
     padding-right: 0.5%;
   }
   
+/* Table Styles */
 
-/*Post-empire.html technical specifications table Styles */
+/*M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML):
+  M6LO7 has been demonstrated by the .t-able and .p-table table classes, the style rules for each being located below their respective sub-sections 
+  which are each noted by indented comments below. The .t-able class table (located at the bottom of post-empire.html) style rules, among other things, 
+  centers the table within the body, reduces the text font size, changes the background color to grey, sets the table width to 50% of the body, 
+  sets the top row and bottom row background color to linear gradient, specifies the column widths of the first 4 columns, and ensures the 4 superweapon 
+  images filling the cells located at cross-section of the first column and the 2nd, 3rd, 4th, and 5th rows each stay within their respective cell borders and also each fill 100% of said borders. 
+  The .p-table class style rules, among other things, align the two tables assigned to the class .p-table (located on pre and post-empire.html pages) to the left of page body elements. 
+  They also set the table widths to 100% of the body (minus the left and right 0.5% body padding style rule applied to all page body elements above above) and
+  set the padding-bottom to 5% (primarily so the two tables on post-empire.html have some space between them).
+  Additionally, the .p-table styles hide the top row from being visible on the rendered pages. This was done, in combination with the lack of borders and the fixed table-layout, 
+  so that page content can be presented similarly to a div based 3-row/2-column grid. The benefit of this method is that table content shrinks and 
+  stays within the page body as the screen size/resolution is reduced.*/
 
-/*M6LO7 Demonstrate how to format a table with CSS 
-  (CSS, group your table styles together and note the overall impact they have on the HTML):
-  M*/
+    /*.t-able class table*/
 table.t-able{
   margin: auto;
   text-align: center;
@@ -273,10 +277,13 @@ table.t-able{
   table-layout: fixed;
 }
 
-/*NtS: Creates borders around header and data cells within the table */
 table.t-able th, table.t-able td{
   border: 1px solid white;
   word-wrap: break-word;
+}
+
+tr#head{
+  background: linear-gradient(#333333, grey);
 }
 
 tfoot{
@@ -299,19 +306,13 @@ col#col-4{
   width: 20%;
 }
 
-tr#head{
-  background: linear-gradient(#333333, grey);
-}
-
 img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
   display: block;
   width: 100%;
 }
 
-
-/*Pre-Empire.html and post-empire.html Palpatine table styles */
-
-table.p-table, table.pe-table{
+  /*.p-table class tables*/
+table.p-table{
   margin: left;
   width: 100%;
   padding-bottom: 5%;
@@ -319,11 +320,11 @@ table.p-table, table.pe-table{
   table-layout: fixed;
 }
 
-table.p-table thead th, table.pe-table thead th{
+table.p-table thead th{
   display: none;
 }
 
-table.p-table tbody th, table.pe-table tbody th{
+table.p-table tbody th{
   background: linear-gradient(#333333, grey);
   background-color: #64696C; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -344,7 +345,12 @@ h1#sw-specs{
   font-size: inherit;
 }
 
-/* Pulldown Styles */
+/* Pull-down Styles */
+
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves):
+  M5LO4 has been demonstrated by the 3 style rules following this comment, all of which are located within the Pull-down Styles section above.
+  The menu is located at the bottom part of the footer on each content page. When a site visitor hovers over the centered red text located
+  at the bottom of the footer of any page, an image given the id "intense" will drop down. */
 
 p#learning{
   font-weight: bold;
@@ -362,25 +368,14 @@ p#learning:hover img#intense{
   display: block;
 }
 
-p#learning:visited img#intense{
-  display: block;
-}
-
 /* Media Query Styles */
 
-/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves): 
-M5LO4 demonstrated by application of the xyz style rules nested within the @media rule below. Pull-down functionality was not added to 
-site navigation because this site does not have navigation submenus. Pull-down (collapsible/expandable) functionality was added to the table located on 
-the post-empire.html page instead. Also, please note that a max-width of 550px rather than the typical 480px because 480px 
-was not sufficient to trigger xyz rules when emulating several of the smartphones available to emulate using the Microsoft Edge browser. */
-
-
 /*M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site):
-  M5LO3 demonstrated by the table rule nested within the @media rule below. At widths above 550px, the table with the classification .t-able (the second table on the post-empire.html page)
-  has a style rule setting its width to 50% of the page body. This width was chosen for astheic reasons. However at smaller resolutions the 50% width limitations makes the table
-  harder content much harder to read. The below style rule increases the table width to 95% of the body at resolutions below 550px to enhance readability.
-  I used the Microsoft Edge browser device emulator to verify this rule worked as intended using multiple mobile devices available for Emulation in Edge. 
-  Also, please note 550px was used instead of 480px to enable functionality of @media rule on all of the emulator's phones. */
+  M5LO3 has been demonstrated by the table style rule nested within the @media rule below. The effect of this rule can be seen on the post-empire.html page using devices
+  no larger than 550px (mobile devices). The impact of this rule is to widen the superweapons specification table (located below the main content and above the footer)
+  from 50% of the body's width to 95% of the body's width. The purpose of this rule is to maximize table space at smaller resolutions to enhance readability.
+  This rule was tested using several of the mobile devices available in the Microsoft Edge browser emulator.*/
+  
 @media only screen and (max-width: 550px){
 
   table.t-able{
@@ -388,15 +383,7 @@ was not sufficient to trigger xyz rules when emulating several of the smartphone
   }
 }
 
-@media only screen and (max-width: 1250px){
-
-  aside.position img{
-    width: 50%;
-  }
-}
-
-/* FLEXBOX STYLES */
-
+/* Flexbox Styles */
 
 body.flexbox-1{
   display: flex;
@@ -415,5 +402,7 @@ body.flexbox-1 article figure{
   flex: 3 1 350px;
 }
 
-/*Formatting Styles */
+/* Location of HTML Objectives/Comments */
+
+  /*Note: M6LO3 & M6LO4 HTML code and associated comments are located on the post-empire.html page.*/
 
