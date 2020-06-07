@@ -403,10 +403,10 @@ p#learning:hover img#intense{
   M5LO6 has been demonstrated by the following style rules with the width and flex properties. The flex properties, at resolutions larger than 550px, 
   cause the aside and article elements to be displayed side-by-side within the about.html body. They also result in the aside element being displayed 
   above the article element in a single column layout at resolutions of 550px and smaller. Additionally the article element has a growth factor 10 times that of 
-  the aside element as the screen size expands. The width property applied to the header item with the id flexbox-2 ensures the header width remains at 100% of
+  the aside element as the screen size expands. The width property applied to the items (header and footer) with the flexbox-2 class ensures the header width remains at 100% of
   the body width regardless of screen size.*/
 
-header#flexbox-2{
+.flexbox-2{
   width: 100%;
 }
 
