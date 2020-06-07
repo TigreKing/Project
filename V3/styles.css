@@ -258,12 +258,11 @@ figure{
   centers the table within the body, reduces the text font size, changes the background color to grey, sets the table width to 50% of the body, 
   sets the top row and bottom row background color to linear gradient, specifies the column widths of the first 4 columns, and ensures the 4 superweapon 
   images filling the cells located at cross-section of the first column and the 2nd, 3rd, 4th, and 5th rows each stay within their respective cell borders and also each fill 100% of said borders. 
-  The .p-table class style rules, among other things, align the two tables assigned to the class .p-table (located on pre and post-empire.html pages) to the left of page body elements. 
-  They also set the table widths to 100% of the body (minus the left and right 0.5% body padding style rule applied to all page body elements above above) and
-  set the padding-bottom to 5% (primarily so the two tables on post-empire.html have some space between them).
-  Additionally, the .p-table styles hide the top row from being visible on the rendered pages. This was done, in combination with the lack of borders and the fixed table-layout, 
-  so that page content can be presented similarly to a div based 3-row/2-column grid. The benefit of this method is that table content shrinks and 
-  stays within the page body as the screen size/resolution is reduced.*/
+  The .p-table class style rules, among other things, set the two tables assigned to the class .p-table (located on pre and post-empire.html pages) to a width equal to 100% of the body 
+  (minus the left and right 0.5% body padding style rule applied to all page body elements above above). They also set the padding-bottom to 5% 
+  (primarily so the two tables on post-empire.html have some space between them). Additionally, the .p-table styles hide the top row from being visible on the rendered pages. 
+  This was done, in combination with the lack of borders and the fixed table-layout, so that page content can be presented similarly to a div based 3-row/2-column grid. 
+  The benefit of this method is that table content shrinks and stays within the page body as the screen size/resolution is reduced.*/
 
     /*.t-able class table*/
 table.t-able{
@@ -313,7 +312,6 @@ img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
 
   /*.p-table class tables*/
 table.p-table{
-  margin: left;
   width: 100%;
   padding-bottom: 5%;
   text-align: left;
