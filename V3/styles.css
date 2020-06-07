@@ -385,21 +385,37 @@ p#learning:hover img#intense{
 
 /* Flexbox Styles */
 
-body.flexbox-1{
-  display: flex;
-  flex-flow: row wrap;
-}
+/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page):
+  M5LO5 has been demonstrated on the about.html page using the following four style rules which are all located under the flexbox styles section labeled above. The impact of these rules on the
+  about.html page is further described in the M5LO7 and M5LO6 comments below. */
+  
+  /*M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them):
+    M5LO7 has been demonstrated by use of the display and flex-flow attributes applied to the body element (the flexbox container) with the class .flexbox-1 (located on about.html). 
+    The effect of these rules on the rendered page content removes the gap between the top of the header and the body border which visually increases the height of the header background colored area, 
+    as well as shifts the course/author/date comments to the right of the body (and the scroll bar) rather than those comments staying to the left of the article content. */
 
-body.flexbox-1 header, footer{
+  body.flexbox-1{
+    display: flex;
+    flex-flow: row-reverse wrap;
+  }
+
+/*M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them):
+  M5LO6 has been demonstrated by the following style rules with the width and flex properties. The flex properties, at resolutions larger than 550px, 
+  cause the aside and article elements to be displayed side-by-side within the about.html body. They also result in the aside element being displayed 
+  above the article element in a single column layout at resolutions of 550px and smaller. Additionally the article element has a growth factor 10 times that of 
+  the aside element as the screen size expands. The width property applied to the header item with the id flexbox-2 ensures the header width remains at 100% of
+  the body width regardless of screen size.*/
+
+header#flexbox-2{
   width: 100%;
 }
 
-body.flexbox-1 article h1, p{
-  flex: 1 1 200px;
+body.flexbox-1 aside{
+  flex: 1 1 150px;
 }
 
-body.flexbox-1 article figure{
-  flex: 3 1 350px;
+body.flexbox-1 article{
+  flex: 10 1 400px;
 }
 
 /* Location of HTML Objectives/Comments */
