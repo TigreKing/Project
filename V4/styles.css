@@ -264,7 +264,7 @@ figure{
   This was done, in combination with the lack of borders and the fixed table-layout, so that page content can be presented similarly to a div based 3-row/2-column grid. 
   The benefit of this method is that table content shrinks and stays within the page body as the screen size/resolution is reduced.*/
 
-    /*.t-able class table*/
+/*.t-able class styles*/
 table.t-able{
   margin: auto;
   text-align: center;
@@ -310,7 +310,7 @@ img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
   width: 100%;
 }
 
-  /*.p-table class tables*/
+/*.p-table class styles*/
 table.p-table{
   width: 100%;
   padding-bottom: 5%;
@@ -342,6 +342,17 @@ h1#sw-specs{
   width: 100%;
   font-size: inherit;
 }
+
+/*.q-table class styles
+table.q-table{
+  width: 100%;
+  table-layout: fixed;
+}
+
+.q-table img{
+  display: block;
+  width: 100%;
+  */
 
 /* Pull-down Styles */
 
@@ -378,6 +389,16 @@ p#learning:hover img#intense{
 
   table.t-able{
     width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1450px){
+
+.shrinkplz{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
 
@@ -464,9 +485,17 @@ textarea{
   width: 40%;
 }
 
+@media only screen and (max-width: 800px){
+
+  textarea#commentbox{
+    width: 100%;
+    margin: auto;
+  }
+}
+
 /*M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate):
   M8LO10 use of a CSS animation has been demonstrated by the style rules located beneath the 'Animation Styles' section below. The styles rules are applied to the notablequotes.html page.
-  The rules create a 'fade out' effect for each of the 5 figures on that page. The fade out affect lasts 15 seconds for each figure, but there is a difference in animation delay
+  The rules create a 'fade out' effect for each of the 4 figures on that page. The fade out affect lasts 15 seconds for each figure, but there is a difference in animation delay
   that creates a sort of top down wave effect of disapearing figures. The fade out starts at a moderate pace for each picture but slowly picks up speed until it disappears entirely.
   Then, after a few seconds the images immediately become visible again.*/
 
@@ -479,37 +508,31 @@ textarea{
   100% {opacity: 0%;}
 }
 
-figure#anim-1{
-  animation-name: fadein;
-  animation-duration: 15s;
-  animation-delay: 1s;
-  animation-timing-function: ease-out;
-}
-
 figure#anim-2{
   animation-name: fadein;
   animation-duration: 15s;
-  animation-delay: 5s;
+  animation-delay: 2s;
   animation-timing-function: ease-out;
 }
 
 figure#anim-3{
   animation-name: fadein;
   animation-duration: 15s;
-  animation-delay: 10s;
+  animation-delay: 6s;
   animation-timing-function: ease-out;
 }
 
 figure#anim-4{
   animation-name: fadein;
   animation-duration: 15s;
-  animation-delay: 15s;
+  animation-delay: 10s;
   animation-timing-function: ease-out;
 }
 
 figure#anim-5{
   animation-name: fadein;
   animation-duration: 15s;
-  animation-delay: 20s;
+  animation-delay: 13s;
   animation-timing-function: ease-out;
 }
+
