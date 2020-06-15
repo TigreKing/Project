@@ -2,10 +2,10 @@
 
 /*
 Course: CIS 155
-Assignment: Palpatine Project V3
+Assignment: Palpatine Project V4
 Purpose: External stylesheet to be applied to Palpatine Webpage html files.
 Author: Jonathan 
-Date: 06.06.20
+Date: 06.15.20
 Filename: styles.css    
 */
 
@@ -436,7 +436,6 @@ body.flexbox-1 article{
      */
 
 /* Form Styles */
-
 .fbrow{
   display: flex;
   flex-flow: row wrap;
@@ -465,4 +464,52 @@ textarea{
   width: 40%;
 }
 
+/*M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate):
+  M8LO10 use of a CSS animation has been demonstrated by the style rules located beneath the 'Animation Styles' section below. The styles rules are applied to the notablequotes.html page.
+  The rules create a 'fade out' effect for each of the 5 figures on that page. The fade out affect lasts 15 seconds for each figure, but there is a difference in animation delay
+  that creates a sort of top down wave effect of disapearing figures. The fade out starts at a moderate pace for each picture but slowly picks up speed until it disappears entirely.
+  Then, after a few seconds the images immediately become visible again.*/
 
+/* Animation Styles */
+@keyframes fadein{
+  0% {opacity: 100%;}
+  25% {opacity: 75%;}
+  50% {opacity: 50%;}
+  75% {opacity: 25%;}
+  100% {opacity: 0%;}
+}
+
+figure#anim-1{
+  animation-name: fadein;
+  animation-duration: 15s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+
+figure#anim-2{
+  animation-name: fadein;
+  animation-duration: 15s;
+  animation-delay: 5s;
+  animation-timing-function: ease-out;
+}
+
+figure#anim-3{
+  animation-name: fadein;
+  animation-duration: 15s;
+  animation-delay: 10s;
+  animation-timing-function: ease-out;
+}
+
+figure#anim-4{
+  animation-name: fadein;
+  animation-duration: 15s;
+  animation-delay: 15s;
+  animation-timing-function: ease-out;
+}
+
+figure#anim-5{
+  animation-name: fadein;
+  animation-duration: 15s;
+  animation-delay: 20s;
+  animation-timing-function: ease-out;
+}
