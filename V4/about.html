@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            Course: CIS 155
+            Assignment: Palpatine Project V3
+            Purpose: About page for the Emperor Palpatine website
+            Author: Jonathan Franklin
+            Date: 06.06.20
+            Filename: about.html
+        -->
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="Star Wars, Palpatine, Darth Sidious, Emperor, The Empire Did Nothing Wrong" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>About</title>
+        <link href="resetstyle.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+        <!--M2LO4 Demonstrate embedded styles (HTML): 
+            M2LO4 demonstrated by creation of a style tag within about.html which changes the list icon for all ol second level items from arabic numerals to lower case roman numerals-->
+        <style>
+            ol ol{
+                list-style-type: lower-roman;
+            }
+        </style>
+    </head>
+    <body class="flexbox-1">
+        <header class="flexbox-2">
+            <nav>
+                <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
+                    M1LO13 for site navigation hyperlinks has been demonstrated by the 'a' elements with href attributes and internal webpage URL values below-->
+                <ul>
+                    <li><a href="index.html">Home &diams;</a></li> 
+                    <li><a href="pre-empire.html">Palpatine Pre-Empire &diams;</a></li> 
+                    <li><a href="post-empire.html">Palpatine Post-Empire &diams;</a></li> 
+                    <li><a href="notablequotes.html">Notable Quotes &diams;</a></li> 
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <p id="PageTop">
+                Course: CIS 155 <br/>
+                Author: Jonathan Franklin <br/>
+                Date: 06.06.20
+            </p>
+        </aside>
+        <article class = "overflow">
+            <!--M4LO1 Demonstrate the use of figure boxes (HTML): M4LO1 demonstrated by figure element below.-->
+                <figure class = "figbox">
+                    <img src="Fig5-1.jpg" alt="Palpatine fights for the people"/>
+                    <figcaption>Figure 5.1: Palpatine offering free, unlimited green energy to the common people.</figcaption>
+                </figure>            
+                <h1>Changelog</h1>
+                    <h2>V1</h2>
+                    <!--M1LO7 Demonstrate the use of ordered lists (HTML): 
+                        M1L07 has been demonstrated by the use of an ordered list element below to log in a numerical format what pages have been added in V1, 
+                        what is currently present, and the impact of CSS on the site-->
+                        <ol>
+                            <li>Created index.html, pre-empire.html, post-empire.html, notablequotes.html, and about.html. All html pages have the elements sub-listed below. 
+                                index.html and about.html also include additional nested elements and content (including all comments demonstrating learning objectives) 
+                                within each of the body items identified in sub-item iii below
+                                <ol> 
+                                    <li>Initialized page: set DOCTYPE, created html tags, nested head and body tags within html tags</li>
+                                    <li>Within head tag: created identifying comments, created meta tags, created title tag, created link tag (link external styles.css stylesheet)</li>
+                                    <li>Within header tag: created nesting nav > ul > li tags, within li tags created 5 a tags to enable consistent site navigation</li>
+                                    <li>Within body tag: created header, aside, article, and footer tags</li>
+                                </ol>
+                            </li>
+                            <li>Created styles.css (includes all comments demonstrating CSS learning objectives with the exception of M2LO4)
+                                <ol>
+                                    <li>Initialized page: set charset, created identifying comments, created 'backbone' comments (structural styles, nav styles, and section styles)</li>
+                                    <li>Within structural styles: applied html, header, and footer stylerules affecting background color, color, and font size</li>
+                                    <li>Within navigation styles: applied style rules impacting the appearance and presentation of header/footer link/nav elements and attributes</li>
+                                    <li>Within section styles: applied more targeted/specific style rules impacting the appearance and presentation of various elements and content</li>
+                                </ol>
+                            </li>
+                        </ol>     
+                    <h2>V2</h2>
+                    <ol>
+                        <li>Created resetstyle.css. Substancially modified styles.css, index.html, about.html, and pre-empire.html.
+                            <ol> 
+                                <li>Created additional style rules governing page layout and graphic design in styles.css </li>
+                                <li>Newly created style rules substancially modified the layout and appearance of all pages, but especially index.html, about.html, and pre-empire.html</li>
+                                <li>Added content to pre-empire.html.</li>
+                            </ol>
+                        </li>
+                    </ol> 
+                    <h2>V3</h2>
+                    <ol>
+                        <li>Styles.css changes.
+                            <ol> 
+                                <li>Commented out a fixed positioning style rule previously applied to footer ID pgbottom link.</li>
+                                <li>Adjusted a footer rule located in the V1 style rules section to create consisent footer text styling.</li>
+                                <li>Created additional body, table, pull-down, media query, and flexbox style rules under a V3 Styles section.</li>
+                            </ol>
+                        </li>
+                        <li>Index.html changes.
+                            <ol> 
+                                <li>Added viewport meta tag to page head.</li>
+                                <li>Commented out targeted location elements in footer <br/> and added footer content from post-empire.html page to create consistent footer text and styling on all pages.</li>
+                                <li>Commented out page dedication.</li>
+                            </ol>
+                        </li>
+                        <li>Pre-Empire.html changes.
+                            <ol> 
+                                <li>Added viewport meta tag to page head.</li>
+                                <li>Added footer content from post-empire.html page to create consistent footer text and styling on all pages.</li>
+                                <li>Commented out div element based grid code and reorganized page content using table element.</li>
+                            </ol>
+                        </li>
+                        <li>Post-empire.html changes.
+                            <ol> 
+                                <li>Added viewport meta tag to page head.</li>
+                                <li>Created a superweapon technical specifications table.</li>
+                                <li>Implemented a 5 column span on row 6 of the tech spec table.</li>
+                                <li>Removed aside element after code location changes left it empty.</li>
+                                <li>Added article content.</li>
+                                <li>Added footer content.</li>
+                            </ol>
+                        </li>
+                        <li>Notablequotes.html changes.
+                            <ol> 
+                                <li>Added viewport meta tag to page head.</li>
+                                <li>Added footer content from post-empire.html page to create consistent footer text and styling on all pages.</li>
+                            </ol>
+                        </li>
+                        <li>About.html changes.
+                            <ol> 
+                                <li>Added viewport meta tag to page head.</li>
+                                <li>Commented out targeted location elements in footer <br/> and added footer content from post-empire.html page to create consistent footer text and styling on all pages.</li>
+                                <li>Added V3 changes to changelog.</li>
+                                <li>Updated figure source location list.</li>
+                            </ol>
+                        </li>
+                    </ol> 
+                <h1>Sources</h1>
+                    <p>The source websites for of all pictures utilized in the creation of this webpage are linked below.</p>
+                    <ul>
+                        <!--M1LO13 Demonstrate using 3 types of hyperlinks: site navigation, targeted location using ids, and external (HTML, this item should be specified 3 times, once on each type of link):
+                            M1LO13 for external hyperlinks has been demonstrated by the 'a' elements with href attributes and external webpage URL values below-->
+                        <li><a href="https://wallpaperaccess.com/star-wars-empire">Background Image</a></li>
+                        <li><a href="https://knowyourmeme.com/photos/615323-intensifies">Footer Pull-Down Image</a></li>
+                        <li><a href="https://knowyourmeme.com/memes/the-tragedy-of-darth-plagueis-the-wise">Figure 1.1</a></li>
+                        <li><a href="https://www.shortlist.com/news/emperor-palpatine-appears-in-ultrasound">Figure 2.1</a></li>
+                        <li><a href="https://www.cinemablend.com/news/2470323/star-wars-everything-you-need-to-know-about-emperor-palpatine">Figure 2.2</a></li>
+                        <li><a href="https://knowyourmeme.com/memes/i-love-democracy">Figure 2.3</a></li>
+                        <li><a href="https://www.cinemablend.com/news/2482357/will-the-knights-of-ren-have-anything-to-do-with-emperor-palpatine-in-star-wars-rise-of-skywalker">Figure 3.1</a></li>
+                        <li><a href="https://starwars.fandom.com/wiki/Emperor%27s_Throne_Room">Figure 3.2</a></li>
+                        <li><a href="https://onsizzle.com/t/emperor-palpatine-meme">Figure 3.3</a></li>
+                        <li><a href="https://www.meme-arsenal.com/en/create/template/1767937">Figure 5.1</a></li>
+                    </ul>   
+        </article>
+        <footer class="flexbox-2">
+        <p>Emperor Palpatine wants <u>YOU!</u> 
+            Talk to your local Imperial recruiter to learn more about the many exciting career opportunities waiting for someone just like you!</p>
+         <p id="learning">Would you like to know more?
+             <img id="intense" src="intensifies.jpg" alt=""/>
+         </p>    
+        <!--<footer class="bottompg">
+            <p>Emperor Palpatine wants <u>YOU!</u> Enlist in the imperial legion today!</p><br />
+            <a href="#PageTop"><p>Click this link to return to the top of the page.</p></a>-->
+        </footer>
+    </body>
+</html>

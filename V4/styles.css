@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+/*
+Course: CIS 155
+Assignment: Palpatine Project V3
+Purpose: External stylesheet to be applied to Palpatine Webpage html files.
+Author: Jonathan 
+Date: 06.06.20
+Filename: styles.css    
+*/
+
+/*--V1 STYLES--*/
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS):
+  M2LO15 has been demonstrated by the use of the background-color and color 'property:value' pairs applied to the html selector below*/
+html{
+  background-color: black;
+  font-size: 1.3rem;
+}
+
+/*M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles that impact text that is rendered on the page):
+  M2LO13 has been demonstrated by the font-family rule within the nav > ul > li selector below which changes the font that the nav elements are presented in  */
+nav > ul > li{
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: impact;
+}
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the > contextual selector to 
+  apply the color darkred and remove underlines from 'a' elements which are children of li elements, which are children of ul elements, which are children of nav elements */
+nav > ul > li a:link, a:visited{
+  color: darkred;
+  text-decoration: none;
+}
+
+/*M2LO11 Demonstrate a pseudo-class(CSS):
+  M2LO11 has been demonstrated by the use of the dynamic :hover pseudo-class to underline and change the color of nested 'a' elements within the nav element when the mouse hovers over a nav hyperlink*/
+nav > ul > li a:hover{
+  color: white;
+  text-decoration: underline; 
+}
+
+footer a:link, a:visited{
+  color: darkred;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+/*M2LO3 Demonstrate style inheritance (CSS):
+  M2LO3 has been demonstrated through the color rule applied to the article selector below because
+  the rule specifying white text will be flowed down to all other elements nested within article (h1, h2, and p elements) unless another more specific rule is applied to one of those elements */
+article{
+  color: white;
+}
+
+aside{
+  color: ivory;
+}
+
+/*M2LO12 Demonstrate how CSS can change presentation of page elements (CSS, these are styles that impact page elements rather than impacting text on the page):
+  M2LO12 was demonstrated by the header selector height rule below which more than doubled the size of the area on the top of all pages that 
+  has the header background color (grey) rather than the html background color (black) 
+header{
+  height: 50px;
+  margin-top: -1%;
+  padding-top: 1%
+}
+*/
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook):
+  M2LO5 has been demonstrated by use of the comma contextual selector to apply a grey background color (and different font family) to any element that matches h1 or h2 
+  instead of the baseline black background color applied to the html selector */
+h1, h2{
+  background-color: #64696C; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the id attribute selector below. id pgbottom created as an attribute of the index.html footer*/
+footer#pgbottom{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/*M2LO6 Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a use of class, see 2-9b Attribute selectors):
+  M2LO6 has been demonstrated by use of the class selector below. class bottompg created as an attribute of the about.html footer*/
+footer{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/*M2LO11 Demonstrate a pseudo-element(CSS):
+  M2LO11 has been demonstrated by use of the 'after' pseudo-element applied to the figcaptain selector below
+  when a user's mouse hovers over figure caption text additional text appears to the right of the caption text*/
+figcaption:hover::after{
+  content: " *Wow what a nice guy*"
+}
+
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id (CSS, specify 1 time, see 2-9b Attribute selectors):
+  M2LO7 has been demonstrated by use of the elem[att="text"] attribute to remove the top left corner and bottom right corner of figure 1.1 on the index.html page */
+img[src="Fig1-1.jpg"]{
+  border-radius: 10% ;
+}
+
+body{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*--V2 STYLES--*/
+
+/*M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML): M4LO5 demonstrated by box-shadow property applied to
+  border of body element.
+  M4LO3 Demonstrate the use of rounded corners for borders (CSS): M4LO3 demonstrated by use of border-radius property to body style rule*/
+body{
+  width: 75%;
+  background-color: black;
+  opacity: 1;
+  box-shadow: #394A59 10px 0px 15px,
+              #394A59 -10px 0px 15px;
+  border: 5px solid white;
+  border-radius: 50px;
+}
+
+header{
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+footer{
+  border-bottom-right-radius: 46px;
+  border-bottom-left-radius: 46px;
+}
+
+/*M4LO2 Demonstrate the use of background images (CSS): M4LO2 demonstrated by background-image and background-size properties applied to html element. */
+html{
+  background-image: url(Background_Img.jpg);
+  background-size: cover;
+}
+
+/*M3LO2 Demonstrate floating elements (CSS, note where you have specified a floating element and what its impact is): M3LO2 demonstrated by float property applied to figure element below. 
+  Image on index.html page is floated to the right of text as a result of this rule. */
+aside > figure{
+  float: right;
+}
+
+/*M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is): M3LO3 demonstrated by clear property applied to .clear div.
+  Impact of rule results in Papatine Post-Empire H1 and associated text completely lowering below image.*/
+.clear{
+  clear: right;
+}
+
+figure.figbox{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS): M4LO6 demonstrated by use of opacity property applied to img rule. Opacity rule specifically applies to image located on about.html.*/
+figure.figbox > img{
+  display: block;
+  width: 100%;
+  opacity: 0.75;
+}
+
+figure.figbox > figcaption{
+background-color: grey;
+text-align: left;
+font-weight: bold;
+}
+
+/*M4LO4 Demonstrate the use of gradients (CSS): M4LO4 demonstrated by use of linear-gradient properties applied to header and footer element. 
+  Gradient is currently visible on header and footer elements on index.html, pre-empire.html, and about.html pages.*/
+header{
+  background: linear-gradient(#333333, grey);
+}
+
+footer{
+  background: linear-gradient(#333333, grey);
+  font-size: 1.2rem;
+}
+
+/*M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML): M3LO8B has been demonstrated by the position and top properties applied to the h1 element below.
+  The impact on the HTML is to lower the positioning of the DEDICATION <h1> tag at the top of the index.html page.*/
+.position h1{
+  position: relative;
+  top: 3px;
+  }
+
+/*M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML): M3LO8A has been demonstrated by the position and top properties applied to the h1 element below.
+  The impact on the HTML is to lower the positioning of the <p> text located within the aside element of the index.html webpage.*/
+  .position p{
+    position: absolute;
+    top: 100px;
+  }
+
+
+/*M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit use of one of the three in your CSS and what the impact is on the HTML): 
+  M3LO9 has been demonstrated by use of fixed positioning below. The impact of the fixed positioning is to make the index.html footer link stay locked in one position regardless of the scale of the screen viewing the page.
+footer#pgbottom a{
+  position: fixed;
+  bottom: 85px;
+  left: 350px;
+}
+*/
+
+/*M3LO10: Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML): M3LO10 has been demonstrated by the scroll property below.
+  The impact of this rule/property can be seen on the about.html page, which has both a horizontal and vertical scroll bar applied to all items located in the article element of that page.*/
+article.overflow{
+  overflow: scroll;
+  height: 1000px;
+}
+
+/*M4LO8 Demonstrate the use of transformations for 2D or 3D images (CSS, note one of these two in your CSS and explain its impact on the HTML): 
+  M4LO8 has been demonstrated by the transform property applied to the figure element below. The impact of this rule on the HTML is that all pictures on all individual pages appear to be tilting backwards slightly in a 3D like effect.*/
+/*M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is): M3LO11 has been demonstrated by the -webkit- prefix applied to the figure element below. 
+  The impact of prefixes is to enhance vendor browser support for webpage properties. The -webkit- prefix in particular is for Android. */
+figure{
+  transform: perspective(900px) rotateX(5deg);
+  -webkit-transform: perspective(900px) rotateX(5deg);
+}
+
+/*	M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules that do this and what their impact is on the HTML; this can be old div-class based grids, or new CSS3 grids): 
+    M3LO6 has been demonstrated by use of the .grid rule and properties below in concert with multiple div tags located on the pre-empire.html page.
+    The impact on HTML can be seen on the pre-empire.html page where the article area has been split up into two columns and three rows.
+    Each row consists of a captioned image on the left and text on the right.  */
+.grid{
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 30% 30% 30%;
+}
+
+/*NOTE: M4LO7 comment can be found on the index.html page. 
+        M4LO1 comment can be found on the about.html page.*/
+
+
+/*--V3 STYLES--*/
+
+/* Body Styles */
+
+  body{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+  
+/* Table Styles */
+
+/*M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML):
+  M6LO7 has been demonstrated by the .t-able and .p-table table classes, the style rules for each being located below their respective sub-sections 
+  which are each noted by indented comments below. The .t-able class table (located at the bottom of post-empire.html) style rules, among other things, 
+  centers the table within the body, reduces the text font size, changes the background color to grey, sets the table width to 50% of the body, 
+  sets the top row and bottom row background color to linear gradient, specifies the column widths of the first 4 columns, and ensures the 4 superweapon 
+  images filling the cells located at cross-section of the first column and the 2nd, 3rd, 4th, and 5th rows each stay within their respective cell borders and also each fill 100% of said borders. 
+  The .p-table class style rules, among other things, set the two tables assigned to the class .p-table (located on pre and post-empire.html pages) to a width equal to 100% of the body 
+  (minus the left and right 0.5% body padding style rule applied to all page body elements above above). They also set the padding-bottom to 5% 
+  (primarily so the two tables on post-empire.html have some space between them). Additionally, the .p-table styles hide the top row from being visible on the rendered pages. 
+  This was done, in combination with the lack of borders and the fixed table-layout, so that page content can be presented similarly to a div based 3-row/2-column grid. 
+  The benefit of this method is that table content shrinks and stays within the page body as the screen size/resolution is reduced.*/
+
+    /*.t-able class table*/
+table.t-able{
+  margin: auto;
+  text-align: center;
+  font-size: 0.80em;
+  background-color: grey;
+  width: 50%;
+  border: 5px ridge white;
+  border-spacing: 0px;
+  table-layout: fixed;
+}
+
+table.t-able th, table.t-able td{
+  border: 1px solid white;
+  word-wrap: break-word;
+}
+
+tr#head{
+  background: linear-gradient(#333333, grey);
+}
+
+tfoot{
+  background: linear-gradient(#333333, grey);
+}
+
+col#col-1{
+  width: 10%;
+}
+
+col#col-2{
+  width: 20%;
+}
+
+col#col-3{
+  width: 20%;
+}
+
+col#col-4{
+  width: 20%;
+}
+
+img#tbl-1, img#tbl-2, img#tbl-3, img#tbl-4{
+  display: block;
+  width: 100%;
+}
+
+  /*.p-table class tables*/
+table.p-table{
+  width: 100%;
+  padding-bottom: 5%;
+  text-align: left;
+  table-layout: fixed;
+}
+
+table.p-table thead th{
+  display: none;
+}
+
+table.p-table tbody th{
+  background: linear-gradient(#333333, grey);
+  background-color: #64696C; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+}
+img#palp2-1, img#palp2-2, img#palp2-3, img#palp3-1, img#palp3-2, img#palp3-3{
+  display: block;
+  width: 100%;
+}
+
+col#p-col-1, col#pe-col-1{
+  width: 50%;
+}
+
+h1#sw-specs{
+  background: linear-gradient(#333333, grey);
+  width: 100%;
+  font-size: inherit;
+}
+
+/* Pull-down Styles */
+
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves):
+  M5LO4 has been demonstrated by the 3 style rules following this comment, all of which are located within the Pull-down Styles section above.
+  The menu is located at the bottom part of the footer on each content page. When a site visitor hovers over the centered red text located
+  at the bottom of the footer of any page, an image given the id "intense" will drop down. */
+
+p#learning{
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+
+img#intense{
+  display: none;
+  margin: auto;
+  width: 40%;
+}
+
+p#learning:hover img#intense{
+  display: block;
+}
+
+/* Media Query Styles */
+
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site):
+  M5LO3 has been demonstrated by the table style rule nested within the @media rule below. The effect of this rule can be seen on the post-empire.html page using devices
+  no larger than 550px (mobile devices). The impact of this rule is to widen the superweapons specification table (located below the main content and above the footer)
+  from 50% of the body's width to 95% of the body's width. The purpose of this rule is to maximize table space at smaller resolutions to enhance readability.
+  This rule was tested using several of the mobile devices available in the Microsoft Edge browser emulator.*/
+  
+@media only screen and (max-width: 550px){
+
+  table.t-able{
+    width: 95%;
+  }
+}
+
+/* Flexbox Styles */
+
+/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout; this can be a new page or a redo of an existing page):
+  M5LO5 has been demonstrated on the about.html page using the following four style rules which are all located under the flexbox styles section labeled above. The impact of these rules on the
+  about.html page is further described in the M5LO7 and M5LO6 comments below. */
+  
+  /*M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them):
+    M5LO7 has been demonstrated by use of the display and flex-flow attributes applied to the body element (the flexbox container) with the class .flexbox-1 (located on about.html). 
+    The effect of these rules on the rendered page content removes the gap between the top of the header and the body border which visually increases the height of the header background colored area, 
+    as well as shifts the course/author/date comments to the right of the body (and the scroll bar) rather than those comments staying to the left of the article content. */
+
+  body.flexbox-1{
+    display: flex;
+    flex-flow: row-reverse wrap;
+  }
+
+/*M5LO6 Demonstrate use of properties of flexbox items (CSS, document what flexbox item properties you use and their impacts, for one CSS selector using them):
+  M5LO6 has been demonstrated by the following style rules with the width and flex properties. The flex properties, at resolutions larger than 550px, 
+  cause the aside and article elements to be displayed side-by-side within the about.html body. They also result in the aside element being displayed 
+  above the article element in a single column layout at resolutions of 550px and smaller. Additionally the article element has a growth factor 10 times that of 
+  the aside element as the screen size expands. The width property applied to the items (header and footer) with the flexbox-2 class ensures the header/footer width remains at 100% of
+  the body width regardless of screen size.*/
+
+.flexbox-2{
+  width: 100%;
+}
+
+body.flexbox-1 aside{
+  flex: 1 1 150px;
+}
+
+body.flexbox-1 article{
+  flex: 10 1 400px;
+}
+
+/* Location of HTML Objectives/Comments */
+
+  /*Note: M6LO3 & M6LO4 HTML code and associated comments are located on the post-empire.html page.*/
+
+
+/*--V4 STYLES--*/
+
+
+/*M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form):
+  M7LO11 formatting a form with CSS has been demonstrated by the style rules included under the Form Styles section below. 
+  The form rules impact the site by;
+    displaying the form as a flexbox,
+    reducing the font sizes for all form text except the label text above each form section,
+    moving the feedback button from the left bottom to the center bottom of the form,
+    changing the major form section label text from grey to white,
+    increasing margin space below each control within the form to improve readability, 
+    and increasing both the height and width of the form textbox area.
+     */
+
+/* Form Styles */
+
+.fbrow{
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.75em;
+}
+
+.appquestions{
+  font-size: 0.8em;
+}
+
+input#submit{
+  margin: auto;
+}
+
+fieldset#q1, fieldset#q2, fieldset#q3, input#name, input#spaceaddress, input#planet{
+  margin-bottom: 15px;
+}
+
+form > label{
+  font-weight: bold;
+  color: white;
+}
+
+textarea{
+  height: 200px;
+  width: 40%;
+}
+
+
